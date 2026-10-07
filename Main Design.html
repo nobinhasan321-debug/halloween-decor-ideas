@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halloween Decor Ideas | Stylish Halloween Decorating Inspiration</title>
+    <meta name="description" content="Discover creative Halloween decor ideas for your home, porch, party and more. Explore stylish, cozy, cute, elegant and DIY Halloween decorating inspiration.">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        spookyBlack: '#0B0A0D',
+                        charcoal: '#151319',
+                        warmIvory: '#F5F0E8',
+                        pumpkin: '#F36B21',
+                        mutedOrange: '#C9511B',
+                        softGray: '#A7A3A0',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #0B0A0D;
+            color: #F5F0E8;
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3, h4, .font-editorial {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0B0A0D;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2D2933;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #F36B21;
+        }
+    </style>
+</head>
+<body class="bg-spookyBlack text-warmIvory antialiased selection:bg-pumpkin selection:text-white">
+
+    <!-- HEADER -->
+    <header id="site-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-spookyBlack/90 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" onclick="navigateTo('home'); return false;" class="group flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-pumpkin/20 border border-pumpkin/40 flex items-center justify-center text-pumpkin group-hover:bg-pumpkin group-hover:text-white transition-all duration-300">
+                    <i class="fa-solid fa-spider text-lg"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-editorial text-xl sm:text-2xl font-bold tracking-tight text-warmIvory group-hover:text-pumpkin transition-colors">Halloween Decor Ideas</span>
+                    <span class="text-[10px] tracking-widest uppercase text-softGray">Editorial Inspiration</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-warmIvory/80">
+                <a href="#" onclick="navigateTo('home'); return false;" class="hover:text-pumpkin transition-colors">Home</a>
+                <a href="#" onclick="filterByCategory('Indoor'); return false;" class="hover:text-pumpkin transition-colors">Indoor Decor</a>
+                <a href="#" onclick="filterByCategory('Outdoor'); return false;" class="hover:text-pumpkin transition-colors">Outdoor Decor</a>
+                <a href="#" onclick="filterByCategory('DIY'); return false;" class="hover:text-pumpkin transition-colors">DIY</a>
+                <a href="#" onclick="filterByCategory('Party'); return false;" class="hover:text-pumpkin transition-colors">Halloween Party</a>
+                <a href="#" onclick="filterByCategory('Elegant'); return false;" class="hover:text-pumpkin transition-colors">Ideas by Style</a>
+                <a href="#" onclick="navigateTo('blog'); return false;" class="hover:text-pumpkin transition-colors">Blog</a>
+            </nav>
+
+            <!-- Actions (Search & Mobile Menu) -->
+            <div class="flex items-center gap-4">
+                <button onclick="toggleSearchModal(true)" class="p-2.5 rounded-full bg-charcoal border border-white/10 text-warmIvory hover:text-pumpkin hover:border-pumpkin/50 transition-all" aria-label="Search">
+                    <i class="fa-solid fa-search"></i>
+                </button>
+                <button onclick="toggleMobileMenu()" class="lg:hidden p-2.5 rounded-full bg-charcoal border border-white/10 text-warmIvory hover:text-pumpkin hover:border-pumpkin/50 transition-all" aria-label="Mobile Menu">
+                    <i class="fa-solid fa-bars" id="mobile-menu-icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-charcoal border-b border-white/10 px-6 py-6 space-y-4">
+            <a href="#" onclick="navigateTo('home'); toggleMobileMenu(); return false;" class="block text-lg font-medium hover:text-pumpkin">Home</a>
+            <a href="#" onclick="filterByCategory('Indoor'); toggleMobileMenu(); return false;" class="block text-lg font-medium hover:text-pumpkin">Indoor Decor</a>
+            <a href="#" onclick="filterByCategory('Outdoor'); toggleMobileMenu(); return false;" class="block text-lg font-medium hover:text-pumpkin">Outdoor Decor</a>
+            <a href="#" onclick="filterByCategory('DIY'); toggleMobileMenu(); return false;" class="block text-lg font-medium hover:text-pumpkin">DIY Projects</a>
+            <a href="#" onclick="filterByCategory('Party'); toggleMobileMenu(); return false;" class="block text-lg font-medium hover:text-pumpkin">Halloween Party</a>
+            <a href="#" onclick="filterByCategory('Elegant'); toggleMobileMenu(); return false;" class="block text-lg font-medium hover:text-pumpkin">Elegant Style</a>
+            <a href="#" onclick="navigateTo('blog'); toggleMobileMenu(); return false;" class="block text-lg font-medium hover:text-pumpkin">All Articles / Blog</a>
+        </div>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <main id="app-container" class="pt-20 min-h-screen">
+        <!-- Views will be dynamically injected here -->
+    </main>
+
+    <!-- SEARCH MODAL -->
+    <div id="search-modal" class="fixed inset-0 z-50 bg-spookyBlack/90 backdrop-blur-xl hidden flex items-start justify-center pt-20 px-4 sm:px-6">
+        <div class="bg-charcoal border border-white/10 rounded-2xl w-full max-w-2xl overflow-hidden shadow-2xl animate-in fade-in zoom-in-95 duration-200">
+            <div class="p-4 sm:p-6 border-b border-white/10 flex items-center justify-between gap-4">
+                <div class="flex items-center gap-3 flex-1 bg-spookyBlack px-4 py-3 rounded-xl border border-white/10 focus-within:border-pumpkin transition-all">
+                    <i class="fa-solid fa-search text-softGray"></i>
+                    <input type="text" id="search-input" oninput="handleSearch(this.value)" placeholder="Search front porch, cozy living room, DIY pumpkins..." class="w-full bg-transparent text-warmIvory placeholder-softGray focus:outline-none text-sm sm:text-base">
+                </div>
+                <button onclick="toggleSearchModal(false)" class="p-3 rounded-xl bg-spookyBlack border border-white/10 text-softGray hover:text-warmIvory hover:border-white/30 transition-all">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+            <div id="search-results" class="p-4 sm:p-6 max-h-[60vh] overflow-y-auto space-y-4">
+                <div class="text-center py-8 text-softGray text-sm">
+                    Type a keyword to discover gorgeous Halloween decorating ideas...
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-charcoal border-t border-white/10 pt-16 pb-12 mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10">
+                <!-- Brand Info -->
+                <div class="lg:col-span-2 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-pumpkin/20 border border-pumpkin/40 flex items-center justify-center text-pumpkin">
+                            <i class="fa-solid fa-spider text-lg"></i>
+                        </div>
+                        <span class="font-editorial text-2xl font-bold tracking-tight text-warmIvory">Halloween Decor Ideas</span>
+                    </div>
+                    <p class="text-softGray text-sm leading-relaxed max-w-sm">
+                        Your premier online destination for stylish, creative, and inspiring Halloween home décor. Designed to spark your imagination for indoor styling, front porches, cozy living rooms, and unforgettable gatherings.
+                    </p>
+                    <div class="flex items-center gap-3 pt-2">
+                        <a href="https://pinterest.com" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-spookyBlack border border-white/10 flex items-center justify-center text-softGray hover:text-white hover:bg-pumpkin hover:border-pumpkin transition-all" aria-label="Pinterest">
+                            <i class="fa-brands fa-pinterest-p"></i>
+                        </a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-spookyBlack border border-white/10 flex items-center justify-center text-softGray hover:text-white hover:bg-pumpkin hover:border-pumpkin transition-all" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-spookyBlack border border-white/10 flex items-center justify-center text-softGray hover:text-white hover:bg-pumpkin hover:border-pumpkin transition-all" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Explore Links -->
+                <div class="space-y-4">
+                    <h3 class="font-editorial text-lg font-semibold text-warmIvory">Explore Decor</h3>
+                    <ul class="space-y-2.5 text-sm text-softGray">
+                        <li><a href="#" onclick="filterByCategory('Indoor'); return false;" class="hover:text-pumpkin transition-colors">Indoor Decor</a></li>
+                        <li><a href="#" onclick="filterByCategory('Outdoor'); return false;" class="hover:text-pumpkin transition-colors">Outdoor Decor</a></li>
+                        <li><a href="#" onclick="filterByCategory('DIY'); return false;" class="hover:text-pumpkin transition-colors">DIY Projects</a></li>
+                        <li><a href="#" onclick="filterByCategory('Party'); return false;" class="hover:text-pumpkin transition-colors">Party Decor</a></li>
+                        <li><a href="#" onclick="filterByCategory('Porch'); return false;" class="hover:text-pumpkin transition-colors">Porch Ideas</a></li>
+                        <li><a href="#" onclick="filterByCategory('Table'); return false;" class="hover:text-pumpkin transition-colors">Table Settings</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal & Info -->
+                <div class="space-y-4">
+                    <h3 class="font-editorial text-lg font-semibold text-warmIvory">Information</h3>
+                    <ul class="space-y-2.5 text-sm text-softGray">
+                        <li><a href="#" onclick="navigateTo('about'); return false;" class="hover:text-pumpkin transition-colors">About Us</a></li>
+                        <li><a href="#" onclick="navigateTo('contact'); return false;" class="hover:text-pumpkin transition-colors">Contact</a></li>
+                        <li><a href="#" onclick="navigateTo('privacy'); return false;" class="hover:text-pumpkin transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" onclick="navigateTo('terms'); return false;" class="hover:text-pumpkin transition-colors">Terms of Use</a></li>
+                        <li><a href="#" onclick="navigateTo('disclaimer'); return false;" class="hover:text-pumpkin transition-colors">Disclaimer</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter Quick Box -->
+                <div class="space-y-4">
+                    <h3 class="font-editorial text-lg font-semibold text-warmIvory">Stay Inspired</h3>
+                    <p class="text-xs text-softGray leading-relaxed">Subscribe for curated weekly Halloween inspiration delivered straight to your inbox.</p>
+                    <form onsubmit="handleFooterNewsletter(event)" class="space-y-2">
+                        <input type="email" required placeholder="Your email address" class="w-full bg-spookyBlack border border-white/10 rounded-xl px-4 py-2.5 text-xs text-warmIvory placeholder-softGray focus:outline-none focus:border-pumpkin transition-all">
+                        <button type="submit" class="w-full py-2.5 bg-pumpkin hover:bg-mutedOrange text-white rounded-xl font-medium text-xs transition-all shadow-lg shadow-pumpkin/20">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-softGray gap-4">
+                <p>&copy; 2026 Halloween Decor Ideas. All rights reserved. Editorial content & visual inspiration.</p>
+                <div class="flex items-center gap-6">
+                    <a href="#" onclick="navigateTo('privacy'); return false;" class="hover:text-warmIvory transition-colors">Privacy</a>
+                    <a href="#" onclick="navigateTo('terms'); return false;" class="hover:text-warmIvory transition-colors">Terms</a>
+                    <a href="#" onclick="navigateTo('disclaimer'); return false;" class="hover:text-warmIvory transition-colors">Disclaimer</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- APPLICATION LOGIC & DATA -->
+    <script>
+        // Database of 10+ Detailed Articles with Rich Editorial Structure
+        const articles = [
+            {
+                id: 1,
+                title: "25 Halloween Front Porch Ideas for a Spooky Welcome",
+                slug: "25-halloween-front-porch-ideas",
+                category: "Outdoor",
+                tags: ["Porch", "Outdoor", "Pumpkins", "Lanterns"],
+                excerpt: "Transform your entryway into an unforgettable autumnal spectacle with layered pumpkins, vintage lanterns, flickering candlelight, and haunting botanical garlands.",
+                image: "https://images.unsplash.com/photo-1508385082359-f38ae991e8f2?auto=format&fit=crop&w=1200&q=80",
+                pinterestImage: "https://images.unsplash.com/photo-1508385082359-f38ae991e8f2?auto=format&fit=crop&w=1000&h=1500&q=80",
+                author: "Clara Vance",
+                date: "October 2, 2026",
+                updatedDate: "October 5, 2026",
+                readTime: "6 min read",
+                content: `
+                    <p class="lead text-lg sm:text-xl text-warmIvory/90 leading-relaxed font-editorial italic">Your front porch is the very first impression guests and trick-or-treaters receive. Transforming it into an atmospheric Halloween haven doesn't require tacky plastic props; instead, focus on rich textures, organic elements, and warm ambient lighting.</p>
+                    
+                    <h2 class="text-2xl sm:text-3xl font-editorial font-bold text-warmIvory mt-8 mb-4">1. Layered Heirloom Pumpkins and Gourds</h2>
+                    <p class="text-warmIvory/80 mb-4 leading-relaxed">Step away from bright orange pumpkins alone and embrace a sophisticated palette of Cinderella pumpkins, heirloom green varieties, and white ghost pumpkins. Group them asymmetrically down your porch steps paired with potted mums or ornamental kale for a lush, organic aesthetic.</p>
+                    <figure class="my-8">
+                        <img src="https://images.unsplash.com/photo-1604147706283-d7119b5b822c?auto=format&fit=crop&w=1000&q=80" alt="Heirloom pumpkins on porch" class="w-full rounded-2xl shadow-xl border border-white/10">
+                        <figcaption class="text-center text-xs text-softGray mt-3">Mixing varied pumpkin sizes and muted tones creates high-end Pinterest curb appeal.</figcaption>
+                    </figure>
+
+                    <h2 class="text-2xl sm:text-3xl font-editorial font-bold text-warmIvory mt-8 mb-4">2. Vintage Lanterns and Flickering Candlelight</h2>
+                    <p class="text-warmIvory/80 mb-4 leading-relaxed">Nothing sets a mysterious twilight mood quite like glowing candles in distressed metal lanterns. Line your pathway with LED pillar candles enclosed in glass hurricane lamps to ensure safety while delivering a warm, amber ambiance.</p>
+
+                    <h2 class="text-2xl sm:text-3xl font-editorial font-bold text-warmIvory mt-8 mb-4">3. Ethereal Floating Boughs and Garlands</h2>
+                    <p class="text-warmIvory/80 mb-4 leading-relaxed">Weave twisted grapevine branches, faux bittersweet garlands, and dried eucalyptus around your front door frame. For an extra touch of enchantment, suspend small floating witch hats or delicate glass votives from fishing wire overhead.</p>
+                    
+                    <div class="bg-charcoal/80 border-l-4 border-pumpkin p-6 rounded-r-2xl my-8">
+                        <h4 class="font-editorial text-lg font-bold text-warmIvory mb-2">Pro Styling Tip</h4>
+                        <p class="text-sm text-softGray leading-relaxed">Keep your color scheme cohesive. Sticking to a maximum of three accent tones—such as charcoal black, muted pumpkin, and antique gold—keeps your porch looking like a magazine feature rather than a party store.</p>
+                    </div>
+
+                    <h2 class="text-2xl sm:text-3xl font-editorial font-bold text-warmIvory mt-8 mb-4">Frequently Asked Questions</h2>
+                    <div class="space-y-4 my-6">
+                        <div class="bg-charcoal p-5 rounded-xl border border-white/10">
+                            <h3 class="font-semibold text-warmIvory mb-2">How do I keep carved pumpkins from rotting on the porch?</h3>
+                            <p class="text-sm text-softGray">Rub petroleum jelly on the carved edges to lock in moisture, or spray them with a mild bleach-water solution. Alternatively, stick to uncarved heirloom pumpkins for outdoor displays that last all season.</p>
+                        </div>
+                        <div class="bg-charcoal p-5 rounded-xl border border-white/10">
+                            <h3 class="font-semibold text-warmIvory mb-2">What is the best lighting for a Halloween front porch?</h3>
+                            <p class="text-sm text-softGray">Warm white string lights paired with amber LED pillar candles offer a cozy, atmospheric glow without looking harsh or overly artificial.</p>
+                        </div>
+                    </div>
+                `
+            },
+            {
+                id: 2,
+                title: "20 Elegant Halloween Decor Ideas for a Stylish Home",
+                slug: "20-elegant-halloween-decor-ideas",
+                category: "Elegant",
+                tags: ["Elegant", "Indoor", "Black & White", "Minimalist"],
+                excerpt: "Elevate your seasonal styling with sophisticated black velvet touches, brass candlesticks, dried botanicals, and moody tablescapes that feel high-end.",
+                image: "https://images.unsplash.com/photo-1572331165267-854da2b10ccc?auto=format&fit=crop&w=1200&q=80",
+                pinterestImage: "https://images.unsplash.com/photo-1572331165267-854da2b10ccc?auto=format&fit=crop&w=1000&h=1500&q=80",
+                author: "Julian Sterling",
+                date: "September 28, 2026",
+                updatedDate: "October 4, 2026",
+                readTime: "5 min read",
+                content: `
+                    <p class="lead text-lg sm:text-xl text-warmIvory/90 leading-relaxed font-editorial italic">Halloween decor doesn't have to be neon orange and plastic. For those with a refined interior design taste, an elegant Halloween approach blends Gothic romance with modern minimalism.</p>
+                    
+                    <h2 class="text-2xl sm:text-3xl font-editorial font-bold text-warmIvory mt-8 mb-4">1. Velvet and Silk Textures</h2>
+                    <p class="text-warmIvory/80 mb-4 leading-relaxed">Swap out your summery throw pillows for rich charcoal velvet, dark emerald silk, and matte black linen. These tactile fabrics instantly add depth and a moody, sophisticated atmosphere to living room sectionals.</p>
+                    
+                    <h2 class="text-2xl sm:text-3xl font-editorial font-bold text-warmIvory mt-8 mb-4">2. Antique Brass and Aged Candelabras</h2>
+                    <p class="text-warmIvory/80 mb-4 leading-relaxed">Cluster multi-armed brass candelabras on your dining room sideboard or coffee table. Let black taper candles burn down unevenly for an authentic, gothic-manor aesthetic.</p>
+                    
+                    <div class="bg-charcoal/80 border-l-4 border-pumpkin p-6 rounded-r-2xl my-8">
+                        <h4 class="font-editorial text-lg font-bold text-warmIvory mb-2">Designer Secret</h4>
+                        <p class="text-sm text-softGray leading-relaxed">Incorporate dried black pampas grass, bleached honesty branches, and dark scabiosa pods into ceramic urns for architectural height and effortless drama.</p>
+                    </div>
+                `
+            },
+            {
+                id: 3,
+                title: "17 Cozy Halloween Living Room Ideas",
+                slug: "17-cozy-halloween-living-room-ideas",
+                category: "Indoor",
+                tags: ["Living Room", "Indoor", "Cozy", "Blankets"],
+                excerpt: "Create the ultimate autumn sanctuary with ambient mood lighting, tactile knitted blankets, subtle seasonal accents, and warm cinematic vibes.",
+                image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80",
+                pinterestImage: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1000&h=1500&q=80",
+                author: "Maya Lin",
+                date: "September 25, 2026",
+                updatedDate: "October 3, 2026",
+                readTime: "4 min read",
+                content: `
+                    <p class="lead text-lg sm:text-xl text-warmIvory/90 leading-relaxed font-editorial italic">When autumn evenings turn crisp, your living room should become an inviting cocoon of warmth, mystery, and seasonal comfort.</p>
+                    
+                    <h2 class="text-2xl sm:text-3xl font-editorial font-bold text-warmIvory mt-8 mb-4">Layered Textiles and Chunky Knits</h2>
+                    <p class="text-warmIvory/80 mb-4 leading-relaxed">Drape chunky cable-knit blankets over armchairs and layer faux fur throws across your sofa. Pair these with deep terracotta and muted amber cushions to reflect the beauty of changing foliage outside.</p>
+                `
+            },
+            {
+                id: 4,
+                title: "25 Cute Halloween Decor Ideas for Families",
+                slug: "25-cute-halloween-decor-ideas-for-families",
+                category: "Cute",
+                tags: ["Cute", "Family", "Playful", "Indoor"],
+                excerpt: "Playful, friendly ghosts, cheerful pastel pumpkins, and whimsical crafts that delight children without sacrificing modern home style.",
+                image: "https://images.unsplash.com/photo-1509557965875-b88c97052f0e?auto=format&fit=crop&w=1200&q=80",
+                pinterestImage: "https://images.unsplash.com/photo-1509557965875-b88c97052f0e?auto=format&fit=crop&w=1000&h=1500&q=80",
+                author: "Sarah Jenkins",
+                date: "September 22, 2026",
+                updatedDate: "October 1, 2026",
+                readTime: "5 min read",
+                content: `
+                    <p class="lead text-lg sm:text-xl text-warmIvory/90 leading-relaxed font-editorial italic">Halloween with little ones is magical. You can embrace whimsical, smiling ghosts and pastel color palettes that keep the home cheerful and fun.</p>
+                    
+                    <h2 class="text-2xl sm:text-3xl font-editorial font-bold text-warmIvory mt-8 mb-4">Pastel Pumpkins and Friendly Ghost Garlands</h2>
+                    <p class="text-warmIvory/80 mb-4 leading-relaxed">Paint miniature pumpkins in soft blush pink, mint green, and creamy vanilla. String up felt ghost garlands along the mantle for an adorable touch that children adore.</p>
+                `
+            },
+            {
+                id: 5,
+                title: "15 Easy DIY Halloween Decorations Anyone Can Make",
+                slug: "15-easy-diy-halloween-decorations",
+                category: "DIY",
+                tags: ["DIY", "Crafts", "Budget", "Indoor"],
+                excerpt: "Budget-friendly, handmade Halloween crafts that look expensive. From floating cheesecloth ghosts to painted terracotta pumpkins.",
+                image: "https://images.unsplash.com/photo-1603575448366-8b3f8a7e0c05?auto=format&fit=crop&w=1200&q=80",
+                pinterestImage: "https://images.unsplash.com/photo-1603575448366-8b3f8a7e0c05?auto=format&fit=crop&w=1000&h=1500&q=80",
+                author: "Liam O'Connor",
+                date: "September 20, 2026",
+                updatedDate: "September 30, 2026",
+                readTime: "6 min read",
+                content: `
+                    <p class="lead text-lg sm:text-xl text-warmIvory/90 leading-relaxed font-editorial italic">Crafting your own Halloween decor is a rewarding way to customize your space while keeping costs delightfully low.</p>
+                    
+                    <h2 class="text-2xl sm:text-3xl font-editorial font-bold text-warmIvory mt-8 mb-4">Cheesecloth Stiffened Ghosts</h2>
+                    <p class="text-warmIvory/80 mb-4 leading-relaxed">Using fabric stiffener, wire frames, and inexpensive cheesecloth, you can create ethereal, glowing ghosts that stand on your entryway console table.</p>
+                `
+            },
+            {
+                id: 6,
+                title: "20 Black and White Halloween Decor Ideas",
+                slug: "20-black-and-white-halloween-decor-ideas",
+                category: "Elegant",
+                tags: ["Black & White", "Modern", "Minimalist", "Indoor"],
+                excerpt: "Striking, graphic, and contemporary. Use monochrome palettes, calligraphy labels, and stark silhouettes for a chic holiday look.",
+                image: "https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fit=crop&w=1200&q=80",
+                pinterestImage: "https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fit=crop&w=1000&h=1500&q=80",
+                author: "Clara Vance",
+                date: "September 18, 2026",
+                updatedDate: "September 28, 2026",
+                readTime: "5 min read",
+                content: `
+                    <p class="lead text-lg sm:text-xl text-warmIvory/90 leading-relaxed font-editorial italic">Monochrome styling brings striking visual contrast and clean lines to Halloween home decor.</p>
+                    
+                    <h2 class="text-2xl sm:text-3xl font-editorial font-bold text-warmIvory mt-8 mb-4">Chalkboard Mantles and White Pumpkins</h2>
+                    <p class="text-warmIvory/80 mb-4 leading-relaxed">Paint pumpkins in stark matte white and use black calligraphy ink to write poetic botanical names or spooky quotes across their surfaces.</p>
+                `
+            },
+            {
+                id: 7,
+                title: "18 Small Apartment Halloween Decorating Ideas",
+                slug: "18-small-apartment-halloween-decorating-ideas",
+                category: "Indoor",
+                tags: ["Small Space", "Apartment", "Indoor", "Budget"],
+                excerpt: "Maximizing style in compact spaces. Vertical hanging, tabletop vignettes, and subtle touches that make small apartments feel magical.",
+                image: "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=1200&q=80",
+                pinterestImage: "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=1000&h=1500&q=80",
+                author: "Maya Lin",
+                date: "September 15, 2026",
+                updatedDate: "September 25, 2026",
+                readTime: "4 min read",
+                content: `
+                    <p class="lead text-lg sm:text-xl text-warmIvory/90 leading-relaxed font-editorial italic">You don't need a sprawling estate to create a bewitching atmosphere. Compact apartments shine with clever vertical styling and focused focal points.</p>
+                    
+                    <h2 class="text-2xl sm:text-3xl font-editorial font-bold text-warmIvory mt-8 mb-4">Vertical Window Silhouettes</h2>
+                    <p class="text-warmIvory/80 mb-4 leading-relaxed">Hang delicate paper bat silhouettes across your living room windows so they cast dancing shadows against the interior walls at sunset.</p>
+                `
+            },
+            {
+                id: 8,
+                title: "25 Halloween Table Decoration Ideas",
+                slug: "25-halloween-table-decoration-ideas",
+                category: "Party",
+                tags: ["Table Decor", "Party", "Dining", "Centerpieces"],
+                excerpt: "Spellbinding tablescapes for autumn dinner parties. Moody florals, black glassware, cascading greenery, and atmospheric candlelight.",
+                image: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1200&q=80",
+                pinterestImage: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1000&h=1500&q=80",
+                author: "Julian Sterling",
+                date: "September 12, 2026",
+                updatedDate: "September 22, 2026",
+                readTime: "6 min read",
+                content: `
+                    <p class="lead text-lg sm:text-xl text-warmIvory/90 leading-relaxed font-editorial italic">Hosting a Halloween dinner party is an exquisite art form when paired with a dramatic, moody tablescape.</p>
+                    
+                    <h2 class="text-2xl sm:text-3xl font-editorial font-bold text-warmIvory mt-8 mb-4">Dark Florals and Pomegranate Accents</h2>
+                    <p class="text-warmIvory/80 mb-4 leading-relaxed">Arrange deep burgundy dahlias, black baccara roses, and cascading ivy down the center of your dining table, interspersed with whole pomegranates and brass candlesticks.</p>
+                `
+            },
+            {
+                id: 9,
+                title: "20 Creative Outdoor Halloween Decoration Ideas",
+                slug: "20-creative-outdoor-halloween-decoration-ideas",
+                category: "Outdoor",
+                tags: ["Outdoor", "Yard", "Lighting", "Porch"],
+                excerpt: "Beyond the front porch: tree uplighting, spectral yard displays, mystical pathways, and enchanting garden atmospheres.",
+                image: "https://images.unsplash.com/photo-1508385082359-f38ae991e8f2?auto=format&fit=crop&w=1200&q=80",
+                pinterestImage: "https://images.unsplash.com/photo-1508385082359-f38ae991e8f2?auto=format&fit=crop&w=1000&h=1500&q=80",
+                author: "Liam O'Connor",
+                date: "September 10, 2026",
+                updatedDate: "September 20, 2026",
+                readTime: "5 min read",
+                content: `
+                    <p class="lead text-lg sm:text-xl text-warmIvory/90 leading-relaxed font-editorial italic">Extend your Halloween storytelling out into your front lawn and garden pathways for a truly immersive seasonal experience.</p>
+                    
+                    <h2 class="text-2xl sm:text-3xl font-editorial font-bold text-warmIvory mt-8 mb-4">Tree Uplighting and Hanging Orbs</h2>
+                    <p class="text-warmIvory/80 mb-4 leading-relaxed">Place weather-resistant amber spotlights at the base of your front yard trees to cast dramatic upward shadows across the branches.</p>
+                `
+            },
+            {
+                id: 10,
+                title: "15 Simple Halloween Entryway Ideas",
+                slug: "15-simple-halloween-entryway-ideas",
+                category: "Indoor",
+                tags: ["Entryway", "Indoor", "Console Table", "Mirrors"],
+                excerpt: "Set the seasonal tone right as you walk through the door with styled console tables, autumn mirrors, and welcoming scented candles.",
+                image: "https://images.unsplash.com/photo-1604147706283-d7119b5b822c?auto=format&fit=crop&w=1200&q=80",
+                pinterestImage: "https://images.unsplash.com/photo-1604147706283-d7119b5b822c?auto=format&fit=crop&w=1000&h=1500&q=80",
+                author: "Sarah Jenkins",
+                date: "September 8, 2026",
+                updatedDate: "September 18, 2026",
+                readTime: "4 min read",
+                content: `
+                    <p class="lead text-lg sm:text-xl text-warmIvory/90 leading-relaxed font-editorial italic">Your entryway console table is the transition zone into your home. Style it with amber glass bottles, dried wheat sheaves, and a subtle glowing pumpkin.</p>
+                    
+                    <h2 class="text-2xl sm:text-3xl font-editorial font-bold text-warmIvory mt-8 mb-4">Mirrored Reflections and Amber Glass</h2>
+                    <p class="text-warmIvory/80 mb-4 leading-relaxed">Place flickering taper candles in front of a decorative entryway mirror to double the warm candlelight glow.</p>
+                `
+            }
+        ];
+
+        // Categories Data for Navigation Cards
+        const categories = [
+            { name: "Indoor Decor", slug: "Indoor", desc: "Ideas for living rooms, bedrooms, entryways, kitchens and more.", image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" },
+            { name: "Outdoor Decor", slug: "Outdoor", desc: "Front porch, yard, driveway, windows and atmospheric displays.", image: "https://images.unsplash.com/photo-1508385082359-f38ae991e8f2?auto=format&fit=crop&w=800&q=80" },
+            { name: "DIY Decor", slug: "DIY", desc: "Creative handmade Halloween decorating projects and budget crafts.", image: "https://images.unsplash.com/photo-1603575448366-8b3f8a7e0c05?auto=format&fit=crop&w=800&q=80" },
+            { name: "Party Decor", slug: "Party", desc: "Tablescapes, party backgrounds, centerpieces and entertaining ideas.", image: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=800&q=80" },
+            { name: "Cute Decor", slug: "Cute", desc: "Family-friendly, playful and colorful Halloween inspiration.", image: "https://images.unsplash.com/photo-1509557965875-b88c97052f0e?auto=format&fit=crop&w=800&q=80" },
+            { name: "Elegant Decor", slug: "Elegant", desc: "Sophisticated black, white, neutral and luxury-inspired décor.", image: "https://images.unsplash.com/photo-1572331165267-854da2b10ccc?auto=format&fit=crop&w=800&q=80" }
+        ];
+
+        // Router State
+        let currentView = 'home';
+        let currentCategoryFilter = 'All';
+        let activeArticleId = null;
+
+        // Initialize App on Window Load
+        window.onload = function() {
+            renderView();
+            window.scrollTo(0, 0);
+        };
+
+        // Navigation Router
+        function navigateTo(view, param = null) {
+            currentView = view;
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            if (view === 'article' && param) {
+                activeArticleId = param;
+            }
+            if (view === 'category' && param) {
+                currentCategoryFilter = param;
+            }
+            renderView();
+        }
+
+        function filterByCategory(cat) {
+            currentCategoryFilter = cat;
+            navigateTo('category', cat);
+        }
+
+        function renderView() {
+            const container = document.getElementById('app-container');
+            
+            if (currentView === 'home') {
+                container.innerHTML = renderHomeView();
+            } else if (currentView === 'blog') {
+                container.innerHTML = renderBlogView();
+            } else if (currentView === 'category') {
+                container.innerHTML = renderCategoryView(currentCategoryFilter);
+            } else if (currentView === 'article') {
+                container.innerHTML = renderArticleView(activeArticleId);
+            } else if (currentView === 'about') {
+                container.innerHTML = renderStaticPageView('About Halloween Decor Ideas', renderAboutContent());
+            } else if (currentView === 'contact') {
+                container.innerHTML = renderStaticPageView('Contact Us', renderContactContent());
+            } else if (currentView === 'privacy') {
+                container.innerHTML = renderStaticPageView('Privacy Policy', renderPrivacyContent());
+            } else if (currentView === 'terms') {
+                container.innerHTML = renderStaticPageView('Terms of Use', renderTermsContent());
+            } else if (currentView === 'disclaimer') {
+                container.innerHTML = renderStaticPageView('Disclaimer', renderDisclaimerContent());
+            }
+        }
+
+        function renderHomeView() {
+            return `
+                <!-- HERO SECTION -->
+                <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden py-20 px-4 sm:px-6 lg:px-8 border-b border-white/10">
+                    <div class="absolute inset-0 z-0">
+                        <img src="https://images.unsplash.com/photo-1508385082359-f38ae991e8f2?auto=format&fit=crop&w=2000&q=85" alt="Halloween Decorated Home" class="w-full h-full object-cover object-center filter brightness-[0.4] scale-105 animate-pulse duration-[10000ms]">
+                        <div class="absolute inset-0 bg-gradient-to-t from-spookyBlack via-spookyBlack/60 to-transparent"></div>
+                    </div>
+                    
+                    <div class="relative z-10 max-w-4xl mx-auto text-center space-y-6">
+                        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-pumpkin/20 border border-pumpkin/40 text-pumpkin text-xs font-semibold tracking-wider uppercase mb-2">
+                            <i class="fa-solid fa-sparkles"></i> Pinterest & Editorial Inspiration 2026
+                        </div>
+                        <h1 class="font-editorial text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-warmIvory leading-tight">
+                            Halloween Decor Ideas That Make Your Home Unforgettable
+                        </h1>
+                        <p class="text-base sm:text-xl text-softGray max-w-2xl mx-auto leading-relaxed font-sans">
+                            Discover creative, stylish and inspiring Halloween decorating ideas for every room, mood and budget.
+                        </p>
+                        <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
+                            <a href="#trending-section" onclick="document.getElementById('trending-section').scrollIntoView({behavior: 'smooth'}); return false;" class="px-8 py-4 bg-pumpkin hover:bg-mutedOrange text-white rounded-full font-medium text-sm transition-all shadow-xl shadow-pumpkin/20 flex items-center gap-3">
+                                <span>Explore Ideas</span>
+                                <i class="fa-solid fa-arrow-down"></i>
+                            </a>
+                            <a href="#" onclick="navigateTo('blog'); return false;" class="px-8 py-4 bg-charcoal/90 hover:bg-charcoal text-warmIvory border border-white/20 rounded-full font-medium text-sm transition-all flex items-center gap-3">
+                                <i class="fa-solid fa-compass text-pumpkin"></i>
+                                <span>Browse Categories</span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- AD SENSE PLACEHOLDER 1 -->
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+                    <div class="w-full bg-charcoal/50 border border-dashed border-white/15 rounded-2xl p-4 text-center text-xs text-softGray">
+                        <span class="uppercase tracking-widest text-[10px] bg-spookyBlack px-2 py-1 rounded text-softGray/70 inline-block mb-1">Advertisement</span>
+                        <p>Google AdSense Responsive Display Banner (728x90 / Fluid)</p>
+                    </div>
+                </div>
+
+                <!-- FEATURED CATEGORY NAVIGATION -->
+                <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                    <div class="text-center max-w-2xl mx-auto mb-12">
+                        <span class="text-xs uppercase tracking-widest text-pumpkin font-semibold">Curated Spaces</span>
+                        <h2 class="font-editorial text-3xl sm:text-4xl font-bold text-warmIvory mt-2">Explore by Category</h2>
+                        <p class="text-softGray text-sm mt-2">Find targeted inspiration for every corner of your home and celebration.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        ${categories.map(cat => `
+                            <div onclick="filterByCategory('${cat.slug}')" class="group relative h-80 rounded-2xl overflow-hidden cursor-pointer border border-white/10 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-pumpkin/50">
+                                <img src="${cat.image}" alt="${cat.name}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                                <div class="absolute inset-0 bg-gradient-to-t from-spookyBlack via-spookyBlack/40 to-transparent"></div>
+                                <div class="absolute inset-0 p-6 flex flex-col justify-end">
+                                    <span class="text-xs uppercase tracking-wider text-pumpkin font-semibold mb-1">Inspiration</span>
+                                    <h3 class="font-editorial text-2xl font-bold text-warmIvory group-hover:text-pumpkin transition-colors">${cat.name}</h3>
+                                    <p class="text-xs text-softGray mt-2 line-clamp-2">${cat.desc}</p>
+                                    <div class="flex items-center gap-2 text-xs text-warmIvory font-medium mt-4 group-hover:translate-x-1 transition-transform">
+                                        <span>Explore Ideas</span>
+                                        <i class="fa-solid fa-arrow-right text-pumpkin"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </section>
+
+                <!-- TRENDING HALLOWEEN IDEAS SECTION -->
+                <section id="trending-section" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-white/10">
+                    <div class="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-12 gap-4">
+                        <div>
+                            <span class="text-xs uppercase tracking-widest text-pumpkin font-semibold">Most Popular</span>
+                            <h2 class="font-editorial text-3xl sm:text-4xl font-bold text-warmIvory mt-2">Trending Halloween Decor Ideas</h2>
+                        </div>
+                        <a href="#" onclick="navigateTo('blog'); return false;" class="text-xs font-semibold uppercase tracking-wider text-pumpkin hover:text-warmIvory transition-colors flex items-center gap-2">
+                            <span>View All Articles</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        ${articles.slice(0, 6).map(art => `
+                            <article onclick="navigateTo('article', ${art.id})" class="group bg-charcoal border border-white/10 rounded-2xl overflow-hidden cursor-pointer hover:border-pumpkin/50 transition-all duration-300 flex flex-col">
+                                <div class="relative h-64 overflow-hidden">
+                                    <img src="${art.image}" alt="${art.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                    <div class="absolute top-4 left-4">
+                                        <span class="px-3 py-1 rounded-full bg-spookyBlack/80 backdrop-blur-md text-[11px] font-medium text-pumpkin border border-pumpkin/30">${art.category}</span>
+                                    </div>
+                                </div>
+                                <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                                    <div>
+                                        <div class="flex items-center gap-3 text-xs text-softGray mb-2">
+                                            <span><i class="fa-regular fa-calendar text-pumpkin mr-1"></i> ${art.date}</span>
+                                            <span>•</span>
+                                            <span><i class="fa-regular fa-clock text-pumpkin mr-1"></i> ${art.readTime}</span>
+                                        </div>
+                                        <h3 class="font-editorial text-xl font-bold text-warmIvory group-hover:text-pumpkin transition-colors leading-snug">${art.title}</h3>
+                                        <p class="text-xs text-softGray mt-2 line-clamp-2 leading-relaxed">${art.excerpt}</p>
+                                    </div>
+                                    <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+                                        <span class="text-xs font-medium text-warmIvory flex items-center gap-1.5">
+                                            <i class="fa-solid fa-feather text-pumpkin"></i> ${art.author}
+                                        </span>
+                                        <span class="text-xs font-semibold text-pumpkin group-hover:translate-x-1 transition-transform">Read Idea &rarr;</span>
+                                    </div>
+                                </div>
+                            </article>
+                        `).join('')}
+                    </div>
+                </section>
+
+                <!-- PINTEREST INSPIRATION GRID -->
+                <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-white/10">
+                    <div class="text-center max-w-2xl mx-auto mb-12">
+                        <span class="text-xs uppercase tracking-widest text-pumpkin font-semibold">Visual Gallery</span>
+                        <h2 class="font-editorial text-3xl sm:text-4xl font-bold text-warmIvory mt-2">Halloween Inspiration</h2>
+                        <p class="text-softGray text-sm mt-2">Pinterest-worthy visual snapshots designed for your seasonal mood boards.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        ${articles.map(art => `
+                            <div onclick="navigateTo('article', ${art.id})" class="group relative rounded-2xl overflow-hidden cursor-pointer border border-white/10 h-96 shadow-lg">
+                                <img src="${art.image}" alt="${art.title}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                                <div class="absolute inset-0 bg-gradient-to-t from-spookyBlack via-spookyBlack/30 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                                <div class="absolute top-4 right-4">
+                                    <span class="w-8 h-8 rounded-full bg-spookyBlack/80 backdrop-blur-md text-pumpkin flex items-center justify-center border border-pumpkin/30 group-hover:bg-pumpkin group-hover:text-white transition-all">
+                                        <i class="fa-brands fa-pinterest-p text-sm"></i>
+                                    </span>
+                                </div>
+                                <div class="absolute inset-0 p-6 flex flex-col justify-end">
+                                    <span class="text-[10px] uppercase tracking-wider text-pumpkin font-semibold mb-1">${art.category}</span>
+                                    <h4 class="font-editorial text-lg font-bold text-warmIvory line-clamp-2">${art.title}</h4>
+                                    <span class="text-xs text-softGray mt-2 flex items-center gap-1 group-hover:text-pumpkin transition-colors">View Idea &rarr;</span>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </section>
+
+                <!-- AD SENSE PLACEHOLDER 2 -->
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+                    <div class="w-full bg-charcoal/50 border border-dashed border-white/15 rounded-2xl p-4 text-center text-xs text-softGray">
+                        <span class="uppercase tracking-widest text-[10px] bg-spookyBlack px-2 py-1 rounded text-softGray/70 inline-block mb-1">Advertisement</span>
+                        <p>Google AdSense In-Feed Native Ad Unit</p>
+                    </div>
+                </div>
+
+                <!-- NEWSLETTER SECTION -->
+                <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                    <div class="bg-charcoal border border-white/10 rounded-3xl p-8 sm:p-12 text-center relative overflow-hidden shadow-2xl">
+                        <div class="absolute -right-20 -bottom-20 w-64 h-64 bg-pumpkin/10 rounded-full blur-3xl pointer-events-none"></div>
+                        <div class="relative z-10 max-w-xl mx-auto space-y-4">
+                            <div class="w-12 h-12 rounded-full bg-pumpkin/20 border border-pumpkin/40 text-pumpkin flex items-center justify-center mx-auto mb-2">
+                                <i class="fa-regular fa-envelope text-lg"></i>
+                            </div>
+                            <h2 class="font-editorial text-3xl sm:text-4xl font-bold text-warmIvory">Get Fresh Halloween Inspiration</h2>
+                            <p class="text-sm text-softGray leading-relaxed">
+                                Receive new decorating ideas, seasonal inspiration and creative Halloween projects directly in your inbox. No spam ever.
+                            </p>
+                            <form onsubmit="handleMainNewsletter(event)" class="flex flex-col sm:flex-row gap-3 pt-4">
+                                <input type="email" required placeholder="Enter your email address" class="flex-1 bg-spookyBlack border border-white/10 rounded-xl px-4 py-3 text-sm text-warmIvory placeholder-softGray focus:outline-none focus:border-pumpkin transition-all">
+                                <button type="submit" class="px-8 py-3 bg-pumpkin hover:bg-mutedOrange text-white rounded-xl font-medium text-sm transition-all shadow-lg shadow-pumpkin/20 whitespace-nowrap">
+                                    Subscribe Now
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            `;
+        }
+
+        function renderBlogView() {
+            return `
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                    <div class="text-center max-w-3xl mx-auto mb-12 space-y-4">
+                        <span class="text-xs uppercase tracking-widest text-pumpkin font-semibold">Editorial Archive</span>
+                        <h1 class="font-editorial text-4xl sm:text-5xl font-bold text-warmIvory">All Halloween Decor Ideas & Articles</h1>
+                        <p class="text-softGray text-sm sm:text-base leading-relaxed">
+                            Explore our comprehensive library of Halloween decorating guides, porch styling tips, DIY projects, and atmospheric home inspiration.
+                        </p>
+                        
+                        <!-- Filter Chips -->
+                        <div class="flex flex-wrap items-center justify-center gap-2 pt-4">
+                            ${['All', 'Indoor', 'Outdoor', 'DIY', 'Party', 'Cute', 'Elegant'].map(cat => `
+                                <button onclick="filterByCategory('${cat}')" class="px-4 py-2 rounded-full text-xs font-medium transition-all ${currentCategoryFilter === cat ? 'bg-pumpkin text-white shadow-md shadow-pumpkin/20' : 'bg-charcoal text-softGray border border-white/10 hover:text-warmIvory hover:border-white/30'}">
+                                    ${cat}
+                                </button>
+                            `).join('')}
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        ${getFilteredArticles().map(art => `
+                            <article onclick="navigateTo('article', ${art.id})" class="group bg-charcoal border border-white/10 rounded-2xl overflow-hidden cursor-pointer hover:border-pumpkin/50 transition-all duration-300 flex flex-col">
+                                <div class="relative h-64 overflow-hidden">
+                                    <img src="${art.image}" alt="${art.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                    <div class="absolute top-4 left-4">
+                                        <span class="px-3 py-1 rounded-full bg-spookyBlack/80 backdrop-blur-md text-[11px] font-medium text-pumpkin border border-pumpkin/30">${art.category}</span>
+                                    </div>
+                                </div>
+                                <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                                    <div>
+                                        <div class="flex items-center gap-3 text-xs text-softGray mb-2">
+                                            <span><i class="fa-regular fa-calendar text-pumpkin mr-1"></i> ${art.date}</span>
+                                            <span>•</span>
+                                            <span><i class="fa-regular fa-clock text-pumpkin mr-1"></i> ${art.readTime}</span>
+                                        </div>
+                                        <h3 class="font-editorial text-xl font-bold text-warmIvory group-hover:text-pumpkin transition-colors leading-snug">${art.title}</h3>
+                                        <p class="text-xs text-softGray mt-2 line-clamp-2 leading-relaxed">${art.excerpt}</p>
+                                    </div>
+                                    <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+                                        <span class="text-xs font-medium text-warmIvory flex items-center gap-1.5">
+                                            <i class="fa-solid fa-feather text-pumpkin"></i> ${art.author}
+                                        </span>
+                                        <span class="text-xs font-semibold text-pumpkin group-hover:translate-x-1 transition-transform">Read Idea &rarr;</span>
+                                    </div>
+                                </div>
+                            </article>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderCategoryView(cat) {
+            currentCategoryFilter = cat;
+            return renderBlogView();
+        }
+
+        function getFilteredArticles() {
+            if (currentCategoryFilter === 'All') return articles;
+            return articles.filter(art => art.category.toLowerCase() === currentCategoryFilter.toLowerCase() || art.tags.includes(currentCategoryFilter));
+        }
+
+        function renderArticleView(id) {
+            const art = articles.find(a => a.id === id) || articles[0];
+            const related = articles.filter(a => a.id !== art.id).slice(0, 3);
+
+            return `
+                <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                    <!-- Breadcrumbs -->
+                    <nav class="flex items-center gap-2 text-xs text-softGray mb-6">
+                        <a href="#" onclick="navigateTo('home'); return false;" class="hover:text-warmIvory">Home</a>
+                        <span>/</span>
+                        <a href="#" onclick="filterByCategory('${art.category}'); return false;" class="hover:text-warmIvory">${art.category} Decor</a>
+                        <span>/</span>
+                        <span class="text-pumpkin truncate max-w-[200px] sm:max-w-xs">${art.title}</span>
+                    </nav>
+
+                    <!-- Article Header -->
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center gap-3">
+                            <span class="px-3 py-1 rounded-full bg-pumpkin/20 border border-pumpkin/40 text-pumpkin text-xs font-semibold">${art.category}</span>
+                            <span class="text-xs text-softGray"><i class="fa-regular fa-clock text-pumpkin mr-1"></i> ${art.readTime}</span>
+                        </div>
+                        <h1 class="font-editorial text-3xl sm:text-5xl font-bold text-warmIvory leading-tight">${art.title}</h1>
+                        <p class="text-base sm:text-lg text-softGray leading-relaxed">${art.excerpt}</p>
+                        
+                        <div class="flex flex-wrap items-center justify-between gap-4 pt-4 pb-6 border-b border-white/10 text-xs text-softGray">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-charcoal border border-white/20 flex items-center justify-center text-pumpkin font-bold">
+                                    ${art.author.charAt(0)}
+                                </div>
+                                <div>
+                                    <p class="font-medium text-warmIvory">${art.author}</p>
+                                    <p class="text-[11px]">Published on ${art.date} (Updated: ${art.updatedDate})</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Social Share Buttons -->
+                            <div class="flex items-center gap-2">
+                                <span class="text-xs text-softGray mr-1 hidden sm:inline">Share:</span>
+                                <button onclick="shareArticle('pinterest', '${art.title}')" class="w-9 h-9 rounded-full bg-charcoal border border-white/10 flex items-center justify-center text-softGray hover:text-white hover:bg-[#E60023] hover:border-[#E60023] transition-all" title="Share on Pinterest">
+                                    <i class="fa-brands fa-pinterest-p"></i>
+                                </button>
+                                <button onclick="shareArticle('facebook', '${art.title}')" class="w-9 h-9 rounded-full bg-charcoal border border-white/10 flex items-center justify-center text-softGray hover:text-white hover:bg-[#1877F2] hover:border-[#1877F2] transition-all" title="Share on Facebook">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </button>
+                                <button onclick="shareArticle('twitter', '${art.title}')" class="w-9 h-9 rounded-full bg-charcoal border border-white/10 flex items-center justify-center text-softGray hover:text-white hover:bg-[#1DA1F2] hover:border-[#1DA1F2] transition-all" title="Share on X">
+                                    <i class="fa-brands fa-x-twitter"></i>
+                                </button>
+                                <button onclick="copyArticleLink()" class="w-9 h-9 rounded-full bg-charcoal border border-white/10 flex items-center justify-center text-softGray hover:text-white hover:bg-pumpkin hover:border-pumpkin transition-all" title="Copy Link">
+                                    <i class="fa-solid fa-link"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Featured Image -->
+                    <div class="rounded-3xl overflow-hidden mb-10 border border-white/10 shadow-2xl max-h-[550px]">
+                        <img src="${art.image}" alt="${art.title}" class="w-full h-full object-cover">
+                    </div>
+
+                    <!-- AD SENSE PLACEHOLDER 3 (Mid-Article) -->
+                    <div class="my-8">
+                        <div class="w-full bg-charcoal/50 border border-dashed border-white/15 rounded-2xl p-4 text-center text-xs text-softGray">
+                            <span class="uppercase tracking-widest text-[10px] bg-spookyBlack px-2 py-1 rounded text-softGray/70 inline-block mb-1">Advertisement</span>
+                            <p>Google AdSense In-Article Responsive Ad Unit</p>
+                        </div>
+                    </div>
+
+                    <!-- Article Body Content -->
+                    <div class="prose prose-invert max-w-none text-warmIvory/90 space-y-6 text-base sm:text-lg leading-relaxed font-sans">
+                        ${art.content}
+                    </div>
+
+                    <!-- Pinterest Pin Callout Box -->
+                    <div class="my-12 bg-charcoal border border-pumpkin/30 rounded-3xl p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-6 shadow-xl">
+                        <div class="w-full sm:w-1/3 rounded-2xl overflow-hidden h-48 border border-white/10">
+                            <img src="${art.pinterestImage}" alt="Pinterest Pin" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex-1 space-y-3 text-center sm:text-left">
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-pumpkin/20 text-pumpkin text-xs font-semibold">
+                                <i class="fa-brands fa-pinterest"></i> Save for Later
+                            </div>
+                            <h3 class="font-editorial text-2xl font-bold text-warmIvory">Love This Halloween Idea? Pin It!</h3>
+                            <p class="text-xs sm:text-sm text-softGray">Save this article to your Pinterest seasonal mood boards so you can easily reference it when you start decorating.</p>
+                            <button onclick="shareArticle('pinterest', '${art.title}')" class="px-6 py-3 bg-[#E60023] hover:bg-[#ad001a] text-white rounded-xl font-medium text-xs transition-all shadow-lg shadow-[#E60023]/30 inline-flex items-center gap-2">
+                                <i class="fa-brands fa-pinterest-p"></i>
+                                <span>Save to Pinterest (1000x1500)</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- AD SENSE PLACEHOLDER 4 (End of Article) -->
+                    <div class="my-8">
+                        <div class="w-full bg-charcoal/50 border border-dashed border-white/15 rounded-2xl p-4 text-center text-xs text-softGray">
+                            <span class="uppercase tracking-widest text-[10px] bg-spookyBlack px-2 py-1 rounded text-softGray/70 inline-block mb-1">Advertisement</span>
+                            <p>Google AdSense Multi-plex Recommended Ad Unit</p>
+                        </div>
+                    </div>
+
+                    <!-- RELATED IDEAS / YOU MAY ALSO LIKE -->
+                    <div class="pt-12 border-t border-white/10 mt-12">
+                        <h3 class="font-editorial text-2xl sm:text-3xl font-bold text-warmIvory mb-8 text-center">You May Also Like</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                            ${related.map(rel => `
+                                <div onclick="navigateTo('article', ${rel.id})" class="group bg-charcoal border border-white/10 rounded-2xl overflow-hidden cursor-pointer hover:border-pumpkin/50 transition-all flex flex-col">
+                                    <div class="h-48 overflow-hidden">
+                                        <img src="${rel.image}" alt="${rel.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                    </div>
+                                    <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+                                        <span class="text-[10px] uppercase tracking-wider text-pumpkin font-semibold">${rel.category}</span>
+                                        <h4 class="font-editorial text-base font-bold text-warmIvory group-hover:text-pumpkin transition-colors line-clamp-2">${rel.title}</h4>
+                                        <span class="text-xs text-softGroup text-softGray">Read Idea &rarr;</span>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                </article>
+            `;
+        }
+
+        function renderStaticPageView(title, contentHtml) {
+            return `
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                    <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
+                        <span class="text-xs uppercase tracking-widest text-pumpkin font-semibold">Halloween Decor Ideas Editorial</span>
+                        <h1 class="font-editorial text-4xl sm:text-5xl font-bold text-warmIvory">${title}</h1>
+                    </div>
+                    <div class="bg-charcoal border border-white/10 rounded-3xl p-8 sm:p-12 space-y-6 text-warmIvory/90 leading-relaxed font-sans shadow-xl">
+                        ${contentHtml}
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderAboutContent() {
+            return `
+                <p class="text-lg font-editorial italic text-warmIvory/90">Welcome to <strong class="text-pumpkin">Halloween Decor Ideas</strong>—your premier digital destination for sophisticated, inspiring, and creative seasonal home decoration.</p>
+                
+                <h2 class="font-editorial text-2xl font-bold text-warmIvory pt-4">Our Editorial Mission</h2>
+                <p class="text-softGray text-sm sm:text-base">We believe Halloween home decorating should be atmospheric, creative, and stylish rather than childish or cluttered. Our mission is to provide genuinely useful decorating inspiration for front porches, cozy living rooms, elegant tablescapes, and budget-friendly DIY projects.</p>
+                
+                <h2 class="font-editorial text-2xl font-bold text-warmIvory pt-4">Why Readers Love Us</h2>
+                <ul class="list-disc pl-5 space-y-2 text-softGray text-sm sm:text-base">
+                    <li><strong>Pinterest-Optimized Visuals:</strong> High-resolution imagery designed to inspire your seasonal mood boards.</li>
+                    <li><strong>Pure Editorial Focus:</strong> No cluttered shopping carts or annoying ecommerce popups—just pure decorating inspiration.</li>
+                    <li><strong>Comprehensive Guides:</strong> Actionable advice, styling tips, and expert recommendations for every room in your home.</li>
+                </ul>
+            `;
+        }
+
+        function renderContactContent() {
+            return `
+                <p class="text-softGray text-sm sm:text-base">Have a question, feedback, or a seasonal decorating tip you'd like to share with our editorial team? We would love to hear from you!</p>
+                
+                <form onsubmit="handleContactForm(event)" class="space-y-4 pt-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs uppercase tracking-wider text-softGray mb-1">Your Name</label>
+                            <input type="text" required class="w-full bg-spookyBlack border border-white/10 rounded-xl px-4 py-3 text-sm text-warmIvory focus:outline-none focus:border-pumpkin">
+                        </div>
+                        <div>
+                            <label class="block text-xs uppercase tracking-wider text-softGray mb-1">Email Address</label>
+                            <input type="email" required class="w-full bg-spookyBlack border border-white/10 rounded-xl px-4 py-3 text-sm text-warmIvory focus:outline-none focus:border-pumpkin">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-softGray mb-1">Subject</label>
+                        <input type="text" required class="w-full bg-spookyBlack border border-white/10 rounded-xl px-4 py-3 text-sm text-warmIvory focus:outline-none focus:border-pumpkin">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-softGray mb-1">Message</label>
+                        <textarea rows="5" required class="w-full bg-spookyBlack border border-white/10 rounded-xl px-4 py-3 text-sm text-warmIvory focus:outline-none focus:border-pumpkin"></textarea>
+                    </div>
+                    <button type="submit" class="px-8 py-3 bg-pumpkin hover:bg-mutedOrange text-white rounded-xl font-medium text-xs transition-all shadow-lg shadow-pumpkin/20">
+                        Send Message
+                    </button>
+                </form>
+            `;
+        }
+
+        function renderPrivacyContent() {
+            return `
+                <p class="text-xs text-softGray">Last updated: October 2026</p>
+                <h2 class="font-editorial text-xl font-bold text-warmIvory">1. Information We Collect</h2>
+                <p class="text-softGray text-sm">Halloween Decor Ideas operates as an editorial inspiration magazine. We respect your privacy and only collect standard analytics data and newsletter signups when voluntarily provided.</p>
+                
+                <h2 class="font-editorial text-xl font-bold text-warmIvory">2. Google AdSense & Cookies</h2>
+                <p class="text-softGray text-sm">We use Google AdSense to serve advertisements. Google uses cookies to serve ads based on your prior visits to our website or other websites. You may opt out of personalized advertising by visiting Google's Ads Settings.</p>
+            `;
+        }
+
+        function renderTermsContent() {
+            return `
+                <p class="text-xs text-softGray">Last updated: October 2026</p>
+                <h2 class="font-editorial text-xl font-bold text-warmIvory">Terms of Use</h2>
+                <p class="text-softGray text-sm">All editorial content, photographs, and layout designs published on Halloween Decor Ideas are protected by copyright. You are welcome to pin our images to Pinterest with proper attribution linking back to our articles.</p>
+            `;
+        }
+
+        function renderDisclaimerContent() {
+            return `
+                <h2 class="font-editorial text-xl font-bold text-warmIvory">Editorial & Advertising Disclaimer</h2>
+                <p class="text-softGray text-sm">Halloween Decor Ideas is a content and inspiration publication. We do not sell products directly, nor are we an ecommerce storefront. We monetize through display advertising partners including Google AdSense to support our editorial team.</p>
+            `;
+        }
+
+        // Interactive Search Functionality
+        function toggleSearchModal(show) {
+            const modal = document.getElementById('search-modal');
+            if (show) {
+                modal.classList.remove('hidden');
+                document.getElementById('search-input').focus();
+            } else {
+                modal.classList.add('hidden');
+            }
+        }
+
+        function handleSearch(query) {
+            const resultsContainer = document.getElementById('search-results');
+            if (!query.trim()) {
+                resultsContainer.innerHTML = '<div class="text-center py-8 text-softGray text-sm">Type a keyword to discover gorgeous Halloween decorating ideas...</div>';
+                return;
+            }
+
+            const q = query.toLowerCase();
+            const matches = articles.filter(art => 
+                art.title.toLowerCase().includes(q) || 
+                art.excerpt.toLowerCase().includes(q) || 
+                art.category.toLowerCase().includes(q) ||
+                art.tags.some(t => t.toLowerCase().includes(q))
+            );
+
+            if (matches.length === 0) {
+                resultsContainer.innerHTML = '<div class="text-center py-8 text-softGray text-sm">No Halloween decorating ideas found matching your search. Try "porch", "living room", or "DIY".</div>';
+                return;
+            }
+
+            resultsContainer.innerHTML = matches.map(art => `
+                <div onclick="toggleSearchModal(false); navigateTo('article', ${art.id});" class="flex items-center gap-4 p-3 rounded-xl bg-spookyBlack border border-white/10 hover:border-pumpkin/50 cursor-pointer transition-all group">
+                    <img src="${art.image}" alt="${art.title}" class="w-16 h-16 rounded-lg object-cover">
+                    <div class="flex-1 min-w-0">
+                        <span class="text-[10px] uppercase tracking-wider text-pumpkin font-semibold">${art.category}</span>
+                        <h4 class="font-editorial text-sm font-bold text-warmIvory group-hover:text-pumpkin truncate">${art.title}</h4>
+                        <p class="text-xs text-softGray truncate">${art.excerpt}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('mobile-menu-icon');
+            menu.classList.toggle('hidden');
+            if (menu.classList.contains('hidden')) {
+                icon.className = 'fa-solid fa-bars';
+            } else {
+                icon.className = 'fa-solid fa-xmark';
+            }
+        }
+
+        // Social Share & Newsletter Handlers (No alert() used per instructions)
+        function shareArticle(platform, title) {
+            if (platform === 'pinterest') {
+                window.open(`https://www.pinterest.com/pin/create/button/?url=${encodeURIComponent(window.location.href)}&media=${encodeURIComponent('https://images.unsplash.com/photo-1508385082359-f38ae991e8f2')}&description=${encodeURIComponent(title)}`, '_blank');
+            } else if (platform === 'facebook') {
+                window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`, '_blank');
+            } else if (platform === 'twitter') {
+                window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(window.location.href)}`, '_blank');
+            }
+        }
+
+        function copyArticleLink() {
+            const dummy = document.createElement('input');
+            document.body.appendChild(dummy);
+            dummy.value = window.location.href;
+            dummy.select();
+            document.execCommand('copy');
+            document.body.removeChild(dummy);
+            
+            showToast('Article link copied to clipboard!');
+        }
+
+        function handleMainNewsletter(e) {
+            e.preventDefault();
+            showToast('Thank you for subscribing to Halloween Decor Ideas!');
+            e.target.reset();
+        }
+
+        function handleFooterNewsletter(e) {
+            e.preventDefault();
+            showToast('Successfully subscribed to weekly inspiration!');
+            e.target.reset();
+        }
+
+        function handleContactForm(e) {
+            e.preventDefault();
+            showToast('Thank you! Your message has been sent to our editorial team.');
+            e.target.reset();
+        }
+
+        function showToast(message) {
+            const toast = document.createElement('div');
+            toast.className = 'fixed bottom-6 right-6 z-50 bg-pumpkin text-white px-6 py-3 rounded-xl shadow-2xl text-sm font-medium animate-in fade-in slide-in-from-bottom-5 duration-300';
+            toast.innerText = message;
+            document.body.appendChild(toast);
+            setTimeout(() => {
+                toast.remove();
+            }, 3500);
+        }
+    </script>
+</body>
+</html>
